@@ -9,9 +9,9 @@
   <title>Btrfs on dm-crypt: An In-Depth Guide</title>
   <meta name="description" content="IntroductionTwo of the most important and exciting features for data storage that Linux hasto offer are full disk encryption via dm-crypt, and built in RAID,...">
 
-  <link rel="stylesheet" href="/~kneit/css/main.css">
-  <link rel="canonical" href="web.cecs.pdx.edu/~kneit/2015/06/28/brtfs-raid-on-dmcrypt.html">
-  <link rel="alternate" type="application/rss+xml" title="Kyle Kneitinger" href="web.cecs.pdx.edu/~kneit/feed.xml" />
+  <link rel="stylesheet" href="/ger/css/main.css">
+  <link rel="canonical" href="kyle.kneit.in/ger/2015/06/28/brtfs-raid-on-dmcrypt.html">
+  <link rel="alternate" type="application/rss+xml" title="Kyle Kneitinger" href="kyle.kneit.in/ger/feed.xml" />
 </head>
 
 
@@ -21,8 +21,8 @@
 
   <div class="wrapper">
 
-      <a class="site.icon"><img src="/~kneit/css/specs.jpg" width="80" height="80">
-    <a class="site-title" href="/~kneit/">Kyle Kneitinger</a>
+      <a class="site.icon"><img src="/ger/css/specs.jpg" width="80" height="80">
+    <a class="site-title" href="/ger/">Kyle Kneitinger</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -36,7 +36,7 @@
       <div class="trigger">
         
           
-          <a class="page-link" href="/~kneit/about/">About</a>
+          <a class="page-link" href="/ger/about/">About</a>
           
         
           
@@ -46,11 +46,11 @@
           
         
           
-          <a class="page-link" href="/~kneit/projects/">Projects</a>
+          <a class="page-link" href="/ger/projects/">Projects</a>
           
         
           
-          <a class="page-link" href="/~kneit/tutorials/">Tutorials</a>
+          <a class="page-link" href="/ger/tutorials/">Tutorials</a>
           
         
       </div>
@@ -97,7 +97,7 @@ as “home”, “var”, or “etc”.  Each subvolume is a member of the Btrfs
 consists of one or more device mappings.  These devices are dm-crypt containers that act
 as an intermediary step, encrypting the data before finally writing it to the hard drive.</p>
 
-<p class="center"><img src="/~kneit/img/btrfsdmcrypt.png" alt="sss" /></p>
+<p class="center"><img src="/ger/img/btrfsdmcrypt.png" alt="sss" /></p>
 
 <h3 id="attribution">Attribution</h3>
 <p>Much of the information from this article was stitched together from the <a href="https://wiki.archlinux.org/">Arch
