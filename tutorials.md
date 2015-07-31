@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: page
+title: Tutorials
+permalink: /tutorials/
 ---
 
 <div class="home">
@@ -8,6 +10,8 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
+    
+    {% if post.group == "tutorials" %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -15,9 +19,8 @@ layout: default
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
       </li>
+      {% endif %}
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
