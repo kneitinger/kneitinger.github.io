@@ -1,16 +1,22 @@
 ---
 layout: page
-title: tutorials
-permalink: /tutorials/
+title: tidbits
+permalink: /tidbits/
+---
+
+a collection of pages that aren't quite tutorials, and aren't quite
+projects.  Just little snippets of knowlegde I felt like documenting.
+
 ---
 
 <div class="home">
 
 
+
   <ul class="post-list">
     {% for post in site.posts %}
     
-    {% if post.group == "tutorials" %}
+    {% if post.group == "tidbits" %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
