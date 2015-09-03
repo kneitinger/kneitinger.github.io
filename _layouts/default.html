@@ -3,20 +3,22 @@
   <link rel="icon" type="image/png"
    href="../favicon.png" />
 
-  {% include head.html %}
+      {% include head.html %}
+  <div class="container">
 
-  <body>
+        {% include header.html %}
+      <body>
 
-    {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+        <div class="page-content">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </div>
+
+
+      </body>
+        {% include footer.html %}
     </div>
-
-    {% include footer.html %}
-
-  </body>
 
 </html>
