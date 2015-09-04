@@ -13,6 +13,14 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+
+// Required for sticky footer
+html,body {
+    margin: 0;
+    padding:0;
+    height:100% ;
+    }
+
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -82,7 +90,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 
@@ -156,6 +164,12 @@ pre {
  * Wrapper
  */
 .wrapper {
+
+    border: 10px solid $grey-color-light;
+    border-radius: 20px;
+    background: lighten($grey-color-light, 25%);
+    padding: 15px;
+
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
@@ -172,7 +186,11 @@ pre {
     }
 }
 
-
+// Container Facilitating the sticky footer layout
+.container {
+    min-height:100%;
+    position:relative;
+    }
 
 /**
  * Clearfix

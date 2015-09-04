@@ -4,15 +4,14 @@ title: tidbits
 permalink: /tidbits/
 ---
 
+<div class="tidbit-subtitle">
 a collection of pages that aren't quite tutorials and aren't quite
 projects:  just little snippets of knowledge, or miscellaneous posts
-
+</div>
 ---
 
+
 <div class="home">
-
-
-
   <ul class="post-list">
     {% for post in site.posts %}
     
