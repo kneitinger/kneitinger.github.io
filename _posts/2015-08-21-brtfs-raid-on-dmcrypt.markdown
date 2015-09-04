@@ -72,6 +72,12 @@ and file level incremental server OS upgrades."*](http://marc.merlins.org/perso/
     1. [Creating Additional encrypt Hooks](#creating-additional-encrypt-hooks)
     2. [Editing /etc/mkinicpio.conf](#editing-etcmkinitcpioconf)
 9. [Setting the Boot Options](#setting-the-boot-options)
+10. [Post Installation Considerations and Niceties](#post-installation-considerations-and-niceties)
+    1. [A Warning About Kernel Updates](#a-warning-about-kernel-updates)
+    2. [Snapshots](#snapshots)
+    3. [Keyfiles & Additional LUKS Keys](#keyfiles-and-additional-luks-keys)
+    4. [Encrypted Swap](#encrypted-swap)
+    
 
 
 
@@ -597,7 +603,7 @@ article.  The most likely culprits are your boot configuration, /etc/fstab,
 ## Post Installation Considerations and Niceties
 ---
 
-### Warning About Kernel Updates
+### A Warning About Kernel Updates
 In the past, some kernel updates have been known to cause corruption to the
 filesystem, most recently in the 3.19.1 kernel where a deadlock prevented
 access.  The issue was easily repairable, and is now fixed, however instability
@@ -651,7 +657,7 @@ tools such as [openSUSE's *Snapper*](https://en.opensuse.org/openSUSE:Snapper_Tu
 These operations are outside of the scope of this tutorial, but by no
 means difficult to do, so have fun checking them out!
 
-### Keyfiles & Additional LUKS Keys
+### Keyfiles and Additional LUKS Keys
 One of the most appealing aspects of the LUKS containers is the ability to have
 up to 8 keys that are able to unlock the container.  The keys can be text
 entered interactively at a prompt, like a standard password, or keyfiles, any
@@ -728,9 +734,7 @@ partition to /dev/mapper/swap like so:
 this indicates that swap partition will be the "swap" container that we just
 told /etc/crypttab to create at boot time.
 
-{% highlight text %}
-#
-{% endhighlight %}
-{% highlight text %}
-#
-{% endhighlight %}
+##Conclusion
+---
+
+

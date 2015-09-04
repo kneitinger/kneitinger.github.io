@@ -4,8 +4,8 @@ title: tidbits
 permalink: /tidbits/
 ---
 
-a collection of pages that aren't quite tutorials, and aren't quite
-projects.  Just little snippets of knowlegde I felt like documenting.
+a collection of pages that aren't quite tutorials and aren't quite
+projects:  just little snippets of knowledge, or miscellaneous posts
 
 ---
 
