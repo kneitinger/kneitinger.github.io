@@ -49,6 +49,12 @@ ul, ol, dl, figure,
  * Images
  */
 img {
+    @include media-query($on-palm) {
+        max-width: 80%;
+        vertical-align: middle;
+        border: 2px solid $grey-color-light;
+        border-radius: 5px;
+        }
     max-width: 100%;
     vertical-align: middle;
     border: 5px solid $grey-color-light;

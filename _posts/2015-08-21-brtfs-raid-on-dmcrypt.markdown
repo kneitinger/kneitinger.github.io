@@ -98,7 +98,7 @@ encrypted containers on each disk and write data to the entire disks.
 First, we will use `cryptsetup` to set up the containers on each device to be
 used. The following command creates a dm-crypt plain container for each partition (specified as `dev/sdXY`) or
 disk (specified as `/dev/sdX`), named
-`container_0`,`container_1`,...,`container_n`. 
+`container_0`, `container_1`, ..., `container_n`. 
 
 {% highlight text %}
     # cryptsetup open --type plain /dev/sdXY container_n
