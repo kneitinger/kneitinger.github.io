@@ -9,7 +9,6 @@ dl, dd, ol, ul, figure {
 }
 
 
-
 /**
  * Basic styling
  */
@@ -42,6 +41,7 @@ ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
 }
+
 
 
 
@@ -81,6 +81,17 @@ figcaption {
  */
 ul, ol {
     margin-left: $spacing-unit;
+    ul {
+        list-style-type: disc;
+        ul {
+            list-style-type: circle;
+        }
+    }
+
+}
+
+ul {
+    list-style-type: disc;
 }
 
 li {
@@ -109,7 +120,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        color: darken($brand-color, 20%);
     }
 
     &:hover {
@@ -143,10 +154,11 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: 14px;
+    font-family: 'Inconsolata',;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #ddf;
 }
 
 code {
@@ -155,7 +167,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
+    overflow-x: auto;
 
     > code {
         border: 0;
