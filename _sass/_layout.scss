@@ -113,6 +113,11 @@
             display: none;
         }
 
+        &:active .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
@@ -133,7 +138,7 @@
  */
 .page-content {
     padding: $spacing-unit 0;
-    padding-bottom: 240px;
+    padding-bottom: 260px;
 }
 
 .page-heading {
