@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Btrfs on dm-crypt: An In-Depth Guide"
-date:   2015-09-03
+date:   2015-09-17
 author: Kyle Kneitinger
 group: tutorials
 ---

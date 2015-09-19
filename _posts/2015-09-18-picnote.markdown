@@ -1,0 +1,86 @@
+---
+layout: post
+title:  "Picnote: a Simple Script for Quick Graphical Notes in i3"
+date:   2015-09-18
+author: Kyle Kneitinger
+group: tidbits
+---
+
+# A Tool is Born from Horrible UI
+Over the summer I was enrolled in a introductory level chemistry class to
+fulfill a miscellaneous lab science credit.  Overall, I had a great time in
+this class with the exception of the web app created by one of the major
+textbook corporations that was required to complete the homework assignments.
+Though there were certain questions that greatly benefited from an interactive
+style, by and large, the app was a hindrance more than an aid.  The app would
+reset and lose all of your progress if you were to use the browser navigation
+buttons, and only one tab of the app could be open at a time.  These factors
+become extremely frustrating when certain questions depended on the diagrams
+featured in earlier ones'.  Because one habitually, and thus frequently uses the
+browser buttons to go back, I lost my progress well into an assignment.  
+
+To prevent this from happening again (as well as take a break from reaction
+balancing) I whipped up a little solution to take a snapshot of an area of the
+screen and display it in a small window on top of all others.  I call this
+little utility `picnote` and it has already proven to be very helpful for
+carrying little bits of reference around my window manager.
+
+Here is a little gif of it in action:
+
+![picnote demo]({{ site.baseurl }}/img/picnote.gif)
+{: .center}
+
+# Components of picnote
+There are three programs that come together to make picnote:
+
++ [`scrot`](https://en.wikipedia.org/wiki/Scrot): a screenshot utility
+  with a command line interface for easy scripting.
++ [`feh`](http://feh.finalrewind.org/): a lightweight, minimal image viewer.
++ [`i3`](http://i3wm.org/): my window manager of choice.  Easy to configure and
+  very powerful.
+
+# How it works 
+`picnote` is actually quite simple.  First, the following shell script handles
+capturing the image and opening in feh.
+
+{% highlight bash linenos %}
+#!/bin/bash
+
+PIC="/tmp/$RANDOM.png"
+
+scrot -s $PIC && feh --title feh:$PIC $PIC &
+rm $PIC
+{% endhighlight %}
+
+Line number 3 sets up a variable to store the name and path of image to be a
+randomly generated .png residing in /tmp/.  Line 5 begins by executing the image
+capture with `scrot -s`.  The "-s" flag indicates that upon execution, the next
+mouse drag will select the box to be captured.  The image is saved as the file
+from line 3.  Upon successful execution, `feh` sets its title as "feh:<image
+name from line 3>" in order to be easily identifiable as a picnote window for
+the i3 rule I'll show soon, and then opens the image.  Line 6 simply deletes
+the image which is fine to do once feh has opened it. 
+
+Because I primarily use i3 as a tiling window manager, and such have set that as
+its default behavior, I needed to create a configuration rule to set all windows
+titled feh:/tmp/... to be floating (which have the additional benefit of
+displaying on top of all tiled windows).
+
+The .i3/config line to accomplish this is
+
+{% highlight bash %}
+for_window [title="feh:/tmp/\*"] floating enable
+{% endhighlight %}
+
+which simply expresses that all windows whose title matches that regular
+expression should be put into floating mode upon creation.
+
+# Usage
+It would be a pain to call `picnote` from the command line everytime it is
+needed, so I simply mapped it to an unused media key on my ThinkPad for easy
+use.  Once it is launched, you can close the image with Esc, Del, q, or your
+window managers keybinding for closing windows.
+
+
+Thank you for reading this and I hope you enjoy picnote if it is a solution for
+a problem you are having!
