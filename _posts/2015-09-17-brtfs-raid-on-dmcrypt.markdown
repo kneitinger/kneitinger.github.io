@@ -17,8 +17,8 @@ both features, I had trouble connecting the information into a cohesive process.
 a clear guide to a system with Btrfs RAID on top of dm-crypt.
 
 ### Who This Tutorial is For
-This article is written with a few assumptions.  First, I assume that you, the
-reader, has a general comfortability with the command line, as these steps have
+This article is written with a few assumptions.  First, I assume that you
+have a general comfortability with the command line, as these steps have
 to be executed in a manual or "guided" CLI installation.  Second, this tutorial
 is written for Arch Linux, however, the majority of the article will remain
 distro-agnostic as the main steps only concern disk setup and the boot process.
@@ -28,7 +28,7 @@ To effectively describe how data is organized, processed, and stored, we will
 follow a file as it traverses down the data hierarchy to the disk.
 First, when we write a file, it will be stored inside of a directory, such as
 /etc/ or /home/sarah/ (indicated in the figure below as orange).  That directory resides in a 
-written to a *subvolume* (kind of like a virtual partition, or LVM volume), such
+ *subvolume* (kind of like a virtual partition, or LVM volume), such
 as "home", "var", or "etc" (magenta).  Each subvolume is a member of the Btrfs pool (lavender), which
 consists of one or more device mappings (blue).  These devices are dm-crypt containers that act
 as an intermediary step, encrypting the data before finally writing it to a particular hard drive (green).
