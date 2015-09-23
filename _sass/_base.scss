@@ -52,13 +52,13 @@ img {
     @include media-query($on-palm) {
         max-width: 80%;
         vertical-align: middle;
-        border: 2px solid $grey-color-light;
-        border-radius: 5px;
+        //border: 2px solid $grey-color-light;
+        //border-radius: 5px;
         }
     max-width: 100%;
     vertical-align: middle;
-    border: 5px solid $grey-color-light;
-    border-radius: 10px;
+    //border: 5px solid $grey-color-light;
+    //border-radius: 10px;
 }
 
 
@@ -183,9 +183,9 @@ pre {
  */
 .wrapper {
 
-    border: 10px solid $grey-color-light;
-    border-radius: 20px;
-    background: lighten($grey-color-light, 25%);
+    //border: 5px solid $grey-color-light;
+    //border-radius: 20px;
+    //background: lighten($grey-color-light, 25%);
     padding: 15px;
 
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
