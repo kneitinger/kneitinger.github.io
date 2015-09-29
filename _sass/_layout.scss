@@ -22,7 +22,7 @@
     //font-family: 'Cabin Condensed', sans-serif;
     padding: $spacing-unit 0;
     //border-bottom: 5px solid $grey-color-light;
-    min-height: 100px;
+    min-height: 130px;
 
     background-image: url("../banner.png");
     background-repeat: repeat-x;
@@ -119,6 +119,7 @@
         border: 10px solid $grey-color-light;
         border-radius: 20px;
         text-align: right;
+        line-height: 30px;
 
         .menu-icon {
             display: block;
