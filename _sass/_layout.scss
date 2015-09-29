@@ -19,6 +19,13 @@
     background-repeat: repeat;
     background-position: center top;
     background-attachment: fixed;
+    height: 100%;
+
+    .page-content{
+        .wrapper{
+            margin-top: 100px;
+        }
+    }
 
 }
 
