@@ -22,8 +22,11 @@
     height: 100%;
 
     .page-content{
-        .wrapper{
-            margin-top: 100px;
+        .pic {
+            position: relative;
+                //padding-top:5000px;
+                margin-top:100px;
+                margin-bottom:-100px;
         }
     }
 
