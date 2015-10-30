@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Rofi: a Minimalist Produtivity Tool for WMs"
+date:   2015-10-19
+author: Kyle Kneitinger
+group: tutorials
+---
+
+I have been a happy dynamic window manager user for years.
+For my academic, musical and leisurely needs, dozens of windows propigate my
+screen at any given time.  I 
