@@ -3,16 +3,16 @@
 .border-wrap {
     border: 8px solid $grey-color-light;
     border-radius: 16px;
-    }
+}
 
 .center {
     text-align: center;
-    }
+}
 
 .half {
     width: 50%;
     height: auto;
-    }
+}
 
 .fourohfour {
     background-image: url("../banner.png");
@@ -24,9 +24,9 @@
     .page-content{
         .pic {
             position: relative;
-                //padding-top:5000px;
-                margin-top:100px;
-                margin-bottom:-100px;
+            //padding-top:5000px;
+            margin-top:100px;
+            margin-bottom:-100px;
         }
     }
 
@@ -59,8 +59,8 @@
             height: 60px;
             width: 75%;
             float: left;
-            }
-        
+        }
+
     }
 }
 
@@ -81,7 +81,7 @@
     border: 4px solid $grey-color-light;
     border-radius: 54px;
     height: 103px;
-    
+
 }
 .site-title {
     color: #fff;
@@ -192,10 +192,10 @@
     padding-bottom: 260px;
     border-top: 2px solid #111;
     .wrapper{
-        
-    border: 5px solid $grey-color-light;
-    border-radius: 20px;
-    background: lighten($grey-color-light, 25%);
+
+        border: 5px solid $grey-color-light;
+        border-radius: 20px;
+        background: lighten($grey-color-light, 25%);
     }
 }
 
@@ -276,18 +276,18 @@
     border-top: 2px solid #111;
     padding: $spacing-unit 0;
     //margin-top: -150px;
-position:absolute;
-   bottom:0;
-      width:100%;
+    position:absolute;
+    bottom:0;
+    width:100%;
     background-image: url("../banner.png");
     background-position: 50% 140%;
     background-repeat: repeat-x;
     background-attachment: fixed;
     .wrapper{
-        
-    border: 5px solid $grey-color-light;
-    border-radius: 20px;
-    background: lighten($grey-color-light, 25%);
+
+        border: 5px solid $grey-color-light;
+        border-radius: 20px;
+        background: lighten($grey-color-light, 25%);
     }
 }
 
@@ -359,5 +359,5 @@ position:absolute;
 .tidbit-subtitle {
     margin-top: -15px;
     margin-bottom: 15px;
-    }
+}
 

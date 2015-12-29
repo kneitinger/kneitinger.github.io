@@ -18,7 +18,7 @@ html,body {
     margin: 0;
     padding:0;
     height:100% ;
-    }
+}
 
 body {
     font-family: $base-font-family;
@@ -54,7 +54,7 @@ img {
         vertical-align: middle;
         //border: 2px solid $grey-color-light;
         //border-radius: 5px;
-        }
+    }
     max-width: 100%;
     vertical-align: middle;
     //border: 5px solid $grey-color-light;
@@ -97,7 +97,7 @@ ul {
 li {
     > ul,
     > ol {
-         margin-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -208,7 +208,7 @@ pre {
 .container {
     min-height:100%;
     position:relative;
-    }
+}
 
 /**
  * Clearfix

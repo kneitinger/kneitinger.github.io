@@ -52,30 +52,30 @@ $on-laptop:        800px;
 
 /*
 .page-content {
-    .wrapper{
-        border: 10px solid green;
-        border-radius: 15px;
-        padding: 20px;
-        }
-    }
+.wrapper{
+border: 10px solid green;
+border-radius: 15px;
+padding: 20px;
+}
+}
 .site-header {
-    .wrapper{
-        border: 10px solid green;
-        border-radius: 15px;
-        padding: 20px;
-        }
-    }
+.wrapper{
+border: 10px solid green;
+border-radius: 15px;
+padding: 20px;
+}
+}
 .site-footer {
-    .wrapper{
-        border: 10px solid green;
-        border-radius: 15px;
-        padding: 20px;
-        }
-    }
-*/
+.wrapper{
+border: 10px solid green;
+border-radius: 15px;
+padding: 20px;
+}
+}
+ */
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+"base",
+"layout",
+"syntax-highlighting"
 ;
