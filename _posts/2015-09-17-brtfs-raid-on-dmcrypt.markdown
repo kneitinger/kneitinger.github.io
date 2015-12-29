@@ -278,8 +278,7 @@ Based on those choices, the resulting cryptsetup command is
 {% endhighlight %}
 
 + The reason that the key size is 512 although we decided on 256 is explained on
-the [Arch Wiki article on dm-crypt encryption]
-(https://wiki.archlinux.org/index.php/Dm-crypt/Device_encryption#Encryption_options_for_LUKS_mode):
+the [Arch Wiki article on dm-crypt encryption](https://wiki.archlinux.org/index.php/Dm-crypt/Device_encryption#Encryption_options_for_LUKS_mode):
  
     > XTS splits the supplied key in half. So to use AES-256 instead of AES-128 you
     > would have to set the XTS key-size to 512.
@@ -485,7 +484,9 @@ ever you like, such as /data/btrfs_pool.
 ---
 Now that the filesystem is assembled, you can essentially follow the rest of the
 Arch Installation guide with only a few slight differences.
+
 ### Executing `pacstrap`
+
 When running the pacstrap command, you need to include an additional package in
 order to have the btrfs tools you have been using.  Also, since you mounted your filesystem
 at /mnt/arch instead of /mnt/ as used in the guide, you need to account for that:
