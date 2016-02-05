@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/kneitinger
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://kneit.in
+  * I am kneitinger (https://keybase.io/kneitinger) on keybase.
+  * I have a public key with fingerprint 2468 CA4E 86FC E09B 7A98  1C19 AED2
+    67AD 52B4 B711
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101937e7f9abb67e260a63cd6665043c05a1974e59f56c6c9d7dd34fbe4e3beff950a",
+            "fingerprint": "2468ca4e86fce09b7a981c19aed267ad52b4b711",
+            "host": "keybase.io",
+            "key_id": "aed267ad52b4b711",
+            "kid": "0101937e7f9abb67e260a63cd6665043c05a1974e59f56c6c9d7dd34fbe4e3beff950a",
+            "uid": "d07a3d73a9202ac186ea691976e6ec19",
+            "username": "kneitinger"
+        },
+        "service": {
+            "hostname": "kneit.in",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1454663039,
+    "expire_in": 157680000,
+    "prev": "bb345d795cc591bb0e6c862042a5333f59ec89da04e411b5570895eacfb4c2fe",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owGtkltsTEEYx7et6qKoNB5cK0fVS8m5zjmz9YBISNEsoS5Rm5k531knW2e3u6db
+jWwoUXFZlHgSIRQJcQlLE0kfKg3RupS4RJRoEJUQpKJElDkNiQeP5mUyX/7/3/f/
+Jt++kTk+f9a5++GzSzMtY7I631JfZQbSGwUaNeuFwEYhAoMXVJuQcEMR2xQCgiiJ
+ElZ00C1MKEU6yEgkSGEmQkgTVYWJGpGwroKGLQ0xxLCpm6aiWhRUUChYFtZEIpQK
+lu2EIR6L247LsbKKDEZUMJDFQMRUJ9iQmIQJmDLSianJVKW6JHHjumjCc/BwlCRg
+ph3lNf4IDcb7h/4/564dxJmiThRTVwiWRZkwyUBAEOYABAh4bk+YgLhD1oOX1QHb
+HZxXSJUKvJ60GXhf683yt2am7XBnLB51oyxazavrXDcW8ExufcxT1QEN/faHqO2Y
+HMoNSYgn7KgjBCSuZK7tASVVUxFSRAWXCrAhZschZHsKTUeGyI/XBpIcSamiaqaO
+NbacaViiVATEDCSLqkw0RVEsDQMzsElEFVRJopqmiwbWgDCLqky2QPBGqnGiQkDl
+OUmYMxN22CFubRyE1PAdWROH+LL8vqG52d56+YYPK/izczdq8n7Omb2ruK/8lPvK
+3N7fPvDJ1zfy/NmSQx8v3o00FDsDsQlFF9Kb54lNkZxj074UrNia6jvcc/nB50Aw
+mJ85cKL8sn95U8X+3isX0psmT6/fV9apTHoiHDs57iYb0RL2b1t5W+pfNtV/Orhq
+a2/qR1favbZ6/JK9Y1s+7HpUMtRqvTQ9mGloP1qc/cYZU/cutehp48Npj9sftg5U
+XM1bM/qqf9T1n2VjO7Z0Lt7pFpV1V8/asOzgg++ZGYdz36XtOXt6knjhlNDXtoaK
+45XBZ5NfRqa8j9/7tPtbedOL2ua5XdltbQua9e6qMyjbKrxVbB8//zq/umrRnSN1
+zzMda3sykJzfWMiMXw==
+=BUq5
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kneitinger
+
+==================================================================
+
