@@ -751,7 +751,7 @@ partition to /dev/mapper/swap like so:
 this indicates that swap partition will be the "swap" container that you just
 told /etc/crypttab to create at boot time.
 
-##Conclusion
+## Conclusion
 ---
 
 I hope that you have found this guide to be informative and helpful.  While it
