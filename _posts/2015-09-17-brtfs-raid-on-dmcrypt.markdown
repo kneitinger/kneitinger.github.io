@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Btrfs on dm-crypt: An In-Depth Guide"
+title:  "Btrfs on dm-crypt"
+subtitle: "An in depth guide to installing Btrfs raid on to encrpyted volumes"
 date:   2015-09-17
 author: Kyle Kneitinger
 group: tutorials
@@ -103,7 +104,7 @@ disk (specified as `/dev/sdX`), named
 `container_0`, `container_1`, ..., `container_n`. 
 
 {% highlight text %}
-    # cryptsetup open --type plain /dev/sdXY container_n
+# cryptsetup open --type plain /dev/sdXY container_n
 {% endhighlight %}
 
 Now that an encrypted container has been opened on each disk, *any* data
@@ -113,7 +114,7 @@ slower to read from. To overwrite to disk, simply execute the following `dd`
 command for each dm-crypt container you created.
 
 {% highlight text %}
-    # dd if=/dev/zero of=/dev/mapper/container_XY
+# dd if=/dev/zero of=/dev/mapper/container_XY
 {% endhighlight %}
 
 Since writing a whole disk can take a long time, you can speed the process up by
@@ -125,7 +126,7 @@ If you are curious as to how the operation is progressing, simply
 open a new virtual terminal and execute
 
 {% highlight text %}
-    # watch -n 20 kill -USR1 $(pidof dd)
+# watch -n 20 kill -USR1 $(pidof dd)
 {% endhighlight %}
 Then switch back to the virtual console of the dd command for updates every 20
 seconds. When the operation is done, switch back to the terminal you executed
@@ -189,31 +190,31 @@ For /dev/sda, create a 120G partition for one half of the btrfs pool, a
 
 
 {% highlight text %}
-    # fdisk /dev/sda
-    Command (m for help): n
-    Partition number: <enter>
-    First sector: <enter>
-    Last Sector: +120G
+# fdisk /dev/sda
+Command (m for help): n
+Partition number: <enter>
+First sector: <enter>
+Last Sector: +120G
 
-    Command (m for help): n
-    Partition number: <enter>
-    First sector: <enter>
-    Last Sector: +7.5G
+Command (m for help): n
+Partition number: <enter>
+First sector: <enter>
+Last Sector: +7.5G
 
-    Command (m for help): t
-    Partition number: <enter>
-    Hex code: 14
+Command (m for help): t
+Partition number: <enter>
+Hex code: 14
 
-    Command (m for help): n
-    Partition number: <enter>
-    First sector: <enter>
-    Last Sector: <enter>
+Command (m for help): n
+Partition number: <enter>
+First sector: <enter>
+Last Sector: <enter>
 
-    Command (m for help): t
-    Partition number: <enter>
-    Hex code: 1
+Command (m for help): t
+Partition number: <enter>
+Hex code: 1
 
-    Command (m for help): w
+Command (m for help): w
 {% endhighlight %}
 
 Since btrfs can reside on either a partition or an entire disk, you do not have
@@ -243,26 +244,26 @@ hashes and ciphers, so to find what settings will work best for you, check the
 results of the `cryptsetup benchmark` command.
 
 {% highlight text %}
-    # cryptsetup benchmark
-    # Tests are approximate using memory only (no storage IO).
-    PBKDF2-sha1      1178175 iterations per second
-    PBKDF2-sha256     755458 iterations per second
-    PBKDF2-sha512     613920 iterations per second
-    PBKDF2-ripemd160  678250 iterations per second
-    PBKDF2-whirlpool  252061 iterations per second
-    #  Algorithm | Key |  Encryption |  Decryption
-         aes-cbc   128b   611.1 MiB/s  2632.0 MiB/s
-     serpent-cbc   128b    81.7 MiB/s   521.5 MiB/s
-     twofish-cbc   128b   181.6 MiB/s   333.4 MiB/s
-         aes-cbc   256b   453.3 MiB/s  2011.5 MiB/s
-     serpent-cbc   256b    82.9 MiB/s   523.0 MiB/s
-     twofish-cbc   256b   183.9 MiB/s   334.6 MiB/s
-         aes-xts   256b  2240.3 MiB/s  2236.9 MiB/s
-     serpent-xts   256b   520.6 MiB/s   506.5 MiB/s
-     twofish-xts   256b   325.5 MiB/s   330.1 MiB/s
-         aes-xts   512b  1732.0 MiB/s  1714.2 MiB/s
-     serpent-xts   512b   520.0 MiB/s   506.3 MiB/s
-     twofish-xts   512b   325.7 MiB/s   329.8 MiB/s
+# cryptsetup benchmark
+# Tests are approximate using memory only (no storage IO).
+PBKDF2-sha1      1178175 iterations per second
+PBKDF2-sha256     755458 iterations per second
+PBKDF2-sha512     613920 iterations per second
+PBKDF2-ripemd160  678250 iterations per second
+PBKDF2-whirlpool  252061 iterations per second
+#  Algorithm | Key |  Encryption |  Decryption
+     aes-cbc   128b   611.1 MiB/s  2632.0 MiB/s
+ serpent-cbc   128b    81.7 MiB/s   521.5 MiB/s
+ twofish-cbc   128b   181.6 MiB/s   333.4 MiB/s
+     aes-cbc   256b   453.3 MiB/s  2011.5 MiB/s
+ serpent-cbc   256b    82.9 MiB/s   523.0 MiB/s
+ twofish-cbc   256b   183.9 MiB/s   334.6 MiB/s
+     aes-xts   256b  2240.3 MiB/s  2236.9 MiB/s
+ serpent-xts   256b   520.6 MiB/s   506.5 MiB/s
+ twofish-xts   256b   325.5 MiB/s   330.1 MiB/s
+     aes-xts   512b  1732.0 MiB/s  1714.2 MiB/s
+ serpent-xts   512b   520.0 MiB/s   506.3 MiB/s
+ twofish-xts   512b   325.7 MiB/s   329.8 MiB/s
 {% endhighlight %}
 
 What one wants is the best balance of strength to performance.  In terms of the
@@ -274,7 +275,7 @@ computer. As a compromise of strength and speed, I will go with 256 bit aes-xts.
 
 Based on those choices, the resulting cryptsetup command is
 {% highlight text %}
-    # cryptsetup --key-size 512 --hash sha256 --iter-time 5000 --use-random luksFormat /dev/sda1
+# cryptsetup --key-size 512 --hash sha256 --iter-time 5000 --use-random luksFormat /dev/sda1
 {% endhighlight %}
 
 + The reason that the key size is 512 although we decided on 256 is explained on
@@ -306,13 +307,13 @@ devices.  Once opened, the containers reside in the filesystem as /dev/mapper/*c
 The syntax for the `cryptsetup open` command is
 
 {% highlight text %}
-    # cryptsetup open --typeluks /dev/sdXY <container_name>
+# cryptsetup open --typeluks /dev/sdXY <container_name>
 {% endhighlight %}
 Where *container_name* is an arbitrary name for the container.  We will use
 "btrfs_pool0" and "btrfs_pool1" for organizational purposes, so the commands are
 {% highlight text %}
-    # cryptsetup open --typeluks /dev/sda1 btrfs_pool0
-    # cryptsetup open --typeluks /dev/sdb btrfs_pool1
+# cryptsetup open --typeluks /dev/sda1 btrfs_pool0
+# cryptsetup open --typeluks /dev/sdb btrfs_pool1
 {% endhighlight %}
 
 Run `ls /dev/mapper` and verify that both containers are there.
@@ -337,7 +338,7 @@ disks.  Since metadata is both small and important, this is a good measure that
 results in virtually no performance loss.
 
 {% highlight text %}
-    # mkfs.btrfs -m raid1 -d raid0 /dev/mapper/btrfs_pool0 /dev/mapper/btrfs_pool1
+# mkfs.btrfs -m raid1 -d raid0 /dev/mapper/btrfs_pool0 /dev/mapper/btrfs_pool1
 {% endhighlight %}
 
 ## Mounting the Btrfs Filesystem and Creating Subvolumes
@@ -360,7 +361,7 @@ To begin creating the various subvolumes, first make a directory to mount the
 btrfs pool: `mkdir /mnt/btrfs`.  Now, mount either of the btrfs_pool containers
 to this directory (it does not matter which one you choose).
 {% highlight text %}
-    # mount /dev/mapper/btrfs_pool0 /mnt/btrfs
+# mount /dev/mapper/btrfs_pool0 /mnt/btrfs
 {% endhighlight %}
 
 There are two common layouts of subvolumes: the parent method, and the sibling
@@ -380,7 +381,7 @@ you can easily create the subvolumes.
 
 You create subvolumes using the `btrfs subvolume create` command with the syntax
 {% highlight text %}
-    # btrfs subvolume create <subvolume name> <location>
+# btrfs subvolume create <subvolume name> <location>
 {% endhighlight %}
 
 You will need to make a "root" subvolume, but other than that, it is up to you
@@ -392,7 +393,7 @@ and movies.  In a server scenario, you may want an "opt" subvolume for various
 services.  I will demonstrate with the subvolumes I used (again, in the /mnt/btrfs/ directory):
 
 {% highlight text %}
-    # btrfs subvolume create root .
+# btrfs subvolume create root .
 # btrfs subvolume create home .
 # btrfs subvolume create var .
 # btrfs subvolume create data .
@@ -402,7 +403,7 @@ Now run `btrfs subvolume list .` and verify that they are all there.  You should
 see output similar to:
 
 {% highlight text %}
-    # btrfs subvolume list .
+# btrfs subvolume list .
     ID 259 gen 6244 top level 5 path home
     ID 260 gen 4778 top level 5 path data
     ID 271 gen 5976 top level 5 path root
@@ -419,7 +420,7 @@ hierarchy, just like in a traditional multi-partition install.
 ---
 Begin by changing your working directory to /mnt/
 {% highlight text %}
-    # cd /mnt
+# cd /mnt
 {% endhighlight %}
 
 Now create a directory that will be the mount point for the root filesystem
@@ -443,14 +444,14 @@ The first step is to mount the "root" subvolume to the /mnt/arch directory, with
 any options you may want.
 
 {% highlight text %}
-    # mount -t btrfs -o defaults,noatime,ssd,compress=lzo,subvol=root /dev/mapper/btrfs_pool0 /mnt/arch
+# mount -t btrfs -o defaults,noatime,ssd,compress=lzo,subvol=root /dev/mapper/btrfs_pool0 /mnt/arch
 {% endhighlight %}
 
 Now make the necessary directories that will be mount points for the other
 subvolumes and partitions:
 
 {% highlight text %}
-    # mkdir /mnt/arch/{boot,data,var,home}
+# mkdir /mnt/arch/{boot,data,var,home}
 {% endhighlight %}
 
 And finish mounting the devices

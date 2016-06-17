@@ -9,6 +9,7 @@ dl, dd, ol, ul, figure {
 }
 
 
+
 /**
  * Basic styling
  */
@@ -16,18 +17,20 @@ dl, dd, ol, ul, figure {
 // Required for sticky footer
 html,body {
     margin: 0;
-    padding:0;
-    height:100% ;
+    padding: 0;
+    height: 100%;
 }
 
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 400;
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }
 
 
@@ -44,21 +47,12 @@ ul, ol, dl, figure,
 
 
 
-
 /**
  * Images
  */
 img {
-    @include media-query($on-palm) {
-        max-width: 80%;
-        vertical-align: middle;
-        //border: 2px solid $grey-color-light;
-        //border-radius: 5px;
-    }
     max-width: 100%;
     vertical-align: middle;
-    //border: 5px solid $grey-color-light;
-    //border-radius: 10px;
 }
 
 
@@ -81,17 +75,6 @@ figcaption {
  */
 ul, ol {
     margin-left: $spacing-unit;
-    ul {
-        list-style-type: disc;
-        ul {
-            list-style-type: circle;
-        }
-    }
-
-}
-
-ul {
-    list-style-type: disc;
 }
 
 li {
@@ -107,7 +90,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-weight: $base-font-weight;
 }
 
 
@@ -120,7 +103,7 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 20%);
+        color: darken($brand-color, 15%);
     }
 
     &:hover {
@@ -154,11 +137,10 @@ blockquote {
  */
 pre,
 code {
-    font-size: 14px;
-    font-family: 'Inconsolata',;
+    font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #ddf;
+    background-color: #eef;
 }
 
 code {
@@ -177,23 +159,39 @@ pre {
 }
 
 
+/**
+ * Tables
+ */
+table, {
+    border-collapse: collapse;
+    margin-left:auto; 
+    margin-right:auto;
+    text-align: center;
+}
+
+table, tr, td {
+    border: 1px solid $grey-color-dark;
+    padding: 2px;
+}
+
+tr, td {
+    text-align: inherit;
+    padding: 6px;
+}
 
 /**
  * Wrapper
  */
 .wrapper {
-
-    //border: 5px solid $grey-color-light;
-    //border-radius: 20px;
-    //background: lighten($grey-color-light, 25%);
-    padding: 15px;
-
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding: $spacing-unit / 2 $spacing-unit;
+
+    background: lighten($grey-color-light, 15%);
+    border: 2px solid #111;
+
     @extend %clearfix;
 
     @include media-query($on-laptop) {
@@ -209,6 +207,9 @@ pre {
     min-height:100%;
     position:relative;
 }
+
+
+
 
 /**
  * Clearfix
@@ -240,3 +241,27 @@ pre {
         }
     }
 }
+
+// Add a centering tag
+.center {
+    text-align: center;
+}
+
+.error {                              
+    background-image: url("../banner.png");
+    background-repeat: repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    height: 100%;
+
+    .page-content{
+        .pic {
+            position: relative;
+            //padding-top:5000px;
+            margin-top:100px;
+            margin-bottom:-100px;
+        }
+    }
+
+}
+

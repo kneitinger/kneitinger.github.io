@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "Picnote: a Simple Script for Quick Graphical Notes in i3"
+title:  "Picnote" 
+subtitle: "A simple script for quick graphical notes in i3"
 date:   2015-09-18
 author: Kyle Kneitinger
 group: tidbits
