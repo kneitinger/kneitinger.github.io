@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Btrfs on dm-crypt"
-subtitle: "An in depth guide to installing Btrfs raid on to encrpyted volumes"
+subtitle: "An in depth guide to installing Btrfs raid on top of encrypted volumes"
 date:   2015-09-17
 author: Kyle Kneitinger
 group: tutorials
