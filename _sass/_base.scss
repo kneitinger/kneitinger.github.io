@@ -145,6 +145,14 @@ code {
 
 code {
     padding: 1px 5px;
+    // Overwrite silliness table to prevent silly formatting on linenos
+    > table, tr, td {
+        border: none;
+        padding: 0px;
+        margin-left:0px; 
+        margin-right:0px;
+        text-align: left;
+    }
 }
 
 pre {
@@ -162,7 +170,7 @@ pre {
 /**
  * Tables
  */
-table, {
+table {
     border-collapse: collapse;
     margin-left:auto; 
     margin-right:auto;
