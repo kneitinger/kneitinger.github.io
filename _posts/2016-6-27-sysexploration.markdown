@@ -3,7 +3,7 @@ layout: post
 title:  "SysExploration"
 subtitle: "Using MIDI system exclusive messages to improve the experience of
 editing presets on the Akai MPD32 USB MIDI controller"
-date:   2016-06-17
+date:   2016-06-27
 author: Kyle Kneitinger
 group: tidbits
 ---
