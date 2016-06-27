@@ -90,6 +90,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
+    font-family: $head-font-family;
     font-weight: $base-font-weight;
 }
 
@@ -174,6 +175,8 @@ table {
     border-collapse: collapse;
     margin-left:auto; 
     margin-right:auto;
+    margin-bottom: $spacing-unit;
+    margin-top: $spacing-unit;
     text-align: center;
 }
 
