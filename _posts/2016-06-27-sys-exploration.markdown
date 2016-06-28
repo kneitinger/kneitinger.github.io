@@ -31,7 +31,7 @@ arranged chromatically always starting at C.  No worries I thought, I could just
 spend a few minutes changing those to my liking.  I was horribly mistaken.
 
 After entering edit mode, setting the pressure requires 6 button presses **for each** pad.
-With 64 pads to set thats 384 presses plus the bank change presses. And don't
+With 64 pads to set, that's 384 presses plus the bank change presses. And don't
 even get me started on changing the pads to diatonic from chromatic! There had
 to be a better way. I noticed that the Akai website had a download for the Vyzex
 preset editor, so I decided to give it a shot. I installed it in my Windows 10
@@ -42,7 +42,7 @@ would be above 1024x768, as the window is tiny and nonadjustable on a relatively
 modern screen. But, if it would make editing easier, I could live with those. I
 was hoping for bulk edit of pads, increment/decrement buttons for values, and
 toggle switches for options.  I got text boxes.  Click a pad, then click the note
-field then enter value in a text box.  Womp womp, this wasn't a solution eiher.
+field then enter value in a text box.  Womp womp, this wasn't a solution either.
 
 <img src="{{ site.baseurl }}/img/mpd_stern.gif" alt="MPD32 arms-crossed, tapping
 foot"
@@ -111,7 +111,7 @@ It also seems that usually the first data byte will provide some sort of
 opcode-like purpose, declaring the intent of the message.  With all this in
 mind, lets look at the MPD32 data.
 
-# Dumpin' The Data
+# Dumpin' the Data
 
 I used the `amidi` from the `alsa-utils` suite of programs to accomplish most of this task. First, I needed to find the device ID, which is easily found with the list (`-l`) flag
 
@@ -130,7 +130,7 @@ upcoming steps when interacting with the device.  Next, I used the port and
 receive flags for `amidi` to store the data to a file called mpd_dump.syx.
 First, I navigated to the <span style="font-family: 'Press Start 2P', cursive; font-size: 11px;padding:2px;"> SysEx Tx</span> page so as to not clutter the dump with
 realtime button press info.  Then after running the following command, I pressed the
-enter knob to initiate the tranfer, and pressed Ctrl+C to stop recieveing:
+enter knob to initiate the transfer, and pressed Ctrl+C to stop receiving:
 
 {% highlight text %}
 $ amidi -p hw:1,0,0 -r mpd_dump.syx
@@ -579,8 +579,8 @@ Like I said, my next step is turn this into an extensible GUI app, so I would
 have to take care to design it in such a way that facilitates easy community
 creation of other controllers. Furthermore, the very offline workflow of receive
 .syx, modify .syx, send .syx could be replaced by dynamic, realtime editing,
-including syncronized editing in the device and the app.  I know that the MPD
-transmits and recieves these events, using much smaller 10-byte realtime
+including synchronized editing in the device and the app.  I know that the MPD
+transmits and receives these events, using much smaller 10-byte realtime
 messages reflecting just the edited parameter. This workflow is a bit nicer in
 that changes are instantly synced to the device, and can be experimented with on
 the fly, while the device is in use even.  

@@ -77,7 +77,7 @@ which simply expresses that all windows whose title matches that regular
 expression should be put into floating mode upon creation.
 
 # Usage
-It would be a pain to call `picnote` from the command line everytime it is
+It would be a pain to call `picnote` from the command line every time it is
 needed, so I simply mapped it to an unused media key on my ThinkPad for easy
 use.  Once it is launched, you can close the image with Esc, Del, q, or your
 window managers keybinding for closing windows.
