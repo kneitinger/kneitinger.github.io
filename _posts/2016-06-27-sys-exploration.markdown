@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SysExploration"
+title:  "SysEx-ploration"
 subtitle: "Using MIDI system exclusive messages to improve the experience of
 editing presets on the Akai MPD32 USB MIDI controller"
 date:   2016-06-27

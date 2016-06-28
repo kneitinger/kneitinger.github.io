@@ -17,7 +17,7 @@ permalink: /tutorials/
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
-        <p>{{ post.subtitle }}</p>
+        <p class="post-summary">{{ post.subtitle }}</p>
       </li>
       {% endif %}
     {% endfor %}
