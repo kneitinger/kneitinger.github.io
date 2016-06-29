@@ -12,7 +12,7 @@ group: tidbits
 @import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
 </style>
 
-# Motivation
+## Motivation
 I recently purchased an Akai MPD32 MIDI controller from a swell person on
 craiglist.  I wanted a relatively small controller that had enough knobs and
 sliders to map to various parameters when sketching out ideas in
@@ -55,7 +55,7 @@ one chose?  A third!
 pondering about there being a better way."
 style="display:block;margin:auto;width:50%;">
 
-# Idea
+## Idea
 I noticed that in the <span style="font-family: 'Press Start 2P', cursive; font-size: 11px;padding:2px;"> GLOBAL</span> menu on the MPD32, there is a <span style="font-family: 'Press Start 2P', cursive; font-size: 11px;padding:2px;"> SysEx Tx</span> option to
 transmit the [MIDI **Sys**tem
 **Ex**clusive](http://www.indiana.edu/~emusic/etext/MIDI/chapter3_MIDI9.shtml)
@@ -65,7 +65,7 @@ knowing nothing about its data representation, 'twas a pure mystery to me back t
 Now, equipped with 3 years of CS knowledge, I figured I could certainly grok
 the format enough to write my own editor...and that is just what I did!
 
-# The System Exclusive Specification
+## The System Exclusive Specification
 Since I was going to be extracting meaning from a SysEx dump, it would probably
 be a good idea to see exactly what the SysEx specification is. I referred to a
 couple of sites, and learned the entire specification in about 20 seconds.  I'm
@@ -111,7 +111,7 @@ It also seems that usually the first data byte will provide some sort of
 opcode-like purpose, declaring the intent of the message.  With all this in
 mind, lets look at the MPD32 data.
 
-# Dumpin' the Data
+## Dumpin' the Data
 
 I used the `amidi` from the `alsa-utils` suite of programs to accomplish most of this task. First, I needed to find the device ID, which is easily found with the list (`-l`) flag
 
@@ -170,7 +170,7 @@ Generic
 Bingo! So I knew I was definitely dealing with the correct data, but how could I
 know which of the 1033 bytes did what?
 
-# Decipherin' the Data
+## Decipherin' the Data
 The most obvious way to determine which byte was associated with which
 parameter,  was to change some
 parameters and track the deltas between the Generic dump and the new ones. But again, I'm doing this all to
@@ -503,7 +503,7 @@ parameters that were physically modifiable is:
 </table>
 <br>
 
-# Workin' with the Data
+## Workin' with the Data
 So there it was, my very own preset map! Now I had the key to whatever
 configuration I could dream up!  I did a quick test to verify that uploading a
 .syx works, by changing the mpd_edit.syx's name bytes from "Generic" to
@@ -573,7 +573,7 @@ with open("mpd_edit.syx", mode='wb') as file:
     file.write(bytes(sysex))
 {% endhighlight %}
 
-# Moving Forward
+## Moving Forward
 
 Like I said, my next step is turn this into an extensible GUI app, so I would
 have to take care to design it in such a way that facilitates easy community
