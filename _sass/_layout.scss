@@ -31,6 +31,7 @@
 }
 
 .site-nav {
+    font-size: 20px;
     float: right;
     line-height: 56px;
 
@@ -224,6 +225,7 @@
 }
 
 .post-link {
+    font-family: $head-font-family;
     display: block;
     font-size: 24px;
 }
@@ -238,6 +240,7 @@
 }
 
 .post-title {
+    font-family: $head-font-family;
     text-transform: lowercase;
     font-size: 42px;
     line-height: 1;
