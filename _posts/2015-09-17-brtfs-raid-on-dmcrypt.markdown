@@ -625,8 +625,7 @@ there are a few things that can be done.  The simplest, if your hardware is
 supported, is to switch to a Long Term Support (LTS) kernel.  These are released
 far less frequently and geared to provide the utmost stability.  They are
 generally heavily tested before deployment to ensure that no bugs of this sort
-can creep up.  If you must run a newer kernel, I recommend a reasonable backup
-external back up system of your most important files and waita few days to
+can creep up.  If you must run a newer kernel, I recommend a reasonable external back up system of your most important files and waiting a few days to
 upgrade after a new kernel version is released, in hopes that any such bugs can
 be discovered and promptly patched.
 
