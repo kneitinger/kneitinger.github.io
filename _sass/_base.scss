@@ -144,6 +144,14 @@ code {
     background-color: #eef;
 }
 
+p {
+    code {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    }
+}
+
 code {
     padding: 1px 5px;
     // Overwrite silliness table to prevent silly formatting on linenos
@@ -259,6 +267,8 @@ tr, td {
 }
 
 .error {                              
+    font-family: $head-font-family;
+    font-size: $base-font-size * 2;
     background-image: url("../banner.png");
     background-repeat: repeat;
     background-position: center top;
