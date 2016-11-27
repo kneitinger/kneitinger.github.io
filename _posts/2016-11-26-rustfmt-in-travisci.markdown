@@ -12,7 +12,7 @@ The [rust-lang-nursery GitHub
 organization](https://github.com/rust-lang-nursery) is a fantastic group of
 folks building tools for both working in, and working with, the Rust language.
 One of these tools, [rustfmt](https://github.com/rust-lang-nursery/rustfmt), is
-quite helpful for maintainting a consistent code style throughout a project.
+quite helpful for maintaining a consistent code style throughout a project.
 
 `rustfmt` is pretty easy to work with.  It's default behavior, when executed on
 a file, is to check it for anything that violates the style guide, and if
@@ -47,7 +47,7 @@ matrix:
 {% endhighlight %}
 
 It relies on `cargo` to run `cargo build --verbose` and `cargo test
---verbose` during the implict "script" phase of the build.
+--verbose` during the implicit "script" phase of the build.
 With just a few slight modifications, we can have format checking be a part of
 this process.
 
@@ -84,7 +84,7 @@ we massage it into returning true upon "failure" and thus continuing the build.
 # Checking the Style
 
 Now that our build context has `rustfmt`, we can have it run along with the
-builds and test. It would be nice if we could have Travis-CI automatically and politely run `rustfmt` and fix any format-offensive code, but that would have to rewrite git history and is out of the question.  The best we can do is break the build upon a push or pull request, so that the devloper knows to run the format command and recommit.
+builds and test. It would be nice if we could have Travis-CI automatically and politely run `rustfmt` and fix any format-offensive code, but that would have to rewrite git history and is out of the question.  The best we can do is break the build upon a push or pull request, so that the developer knows to run the format command and recommit.
 
 Since any command with a non-zero return status breaks the build, we just need `cargo fmt` to break at some point.
 Again, the default behavior of `rustfmt`, even when wrapped
