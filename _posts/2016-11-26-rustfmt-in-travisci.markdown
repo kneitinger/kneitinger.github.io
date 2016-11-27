@@ -53,9 +53,6 @@ this process.
 
 # Installing the Tool
 
-It would be nice if we could have Travis-CI automatically and politely run `rustfmt` and fix
-any format-offensive code, but that would have to rewrite git history and is out of the question.  The best we can do is break the build upon a push or pull request, so that the devloper knows to run the format command and recommit. Since any command with a non-zero return status breaks the build, we just need `cargo fmt` to break at some point.
-
 Travis CI can has an optional "install" step (see [Travis-CI: The Build
 Lifecycle](https://docs.travis-ci.com/user/customizing-the-build/#The-Build-Lifecycle))
 where we can have `cargo` install `rustfmt` and then add it to our path. This step can take a very long time to finish due to compilation of the `env_logger` crate.  Thankfully Travis CI provides a mechanism for caching dependencies with the `cache` key. Putting what we have so far together, we get:
@@ -87,12 +84,15 @@ we massage it into returning true upon "failure" and thus continuing the build.
 # Checking the Style
 
 Now that our build context has `rustfmt`, we can have it run along with the
-builds and test.  Again, the default behavior of `rustfmt`, even when wrapped
+builds and test. It would be nice if we could have Travis-CI automatically and politely run `rustfmt` and fix any format-offensive code, but that would have to rewrite git history and is out of the question.  The best we can do is break the build upon a push or pull request, so that the devloper knows to run the format command and recommit.
+
+Since any command with a non-zero return status breaks the build, we just need `cargo fmt` to break at some point.
+Again, the default behavior of `rustfmt`, even when wrapped
 into `cargo`, is to silently backup and reformat and offending code. We need a
 way to detect when code is malformatted.  If we check the usage with `rustfmt -h`, we see the `--write-mode [replace|overwrite|display|diff|coverage|checkstyle]` option.
 The default setting is 'replace', but after trying them out, it seems the most
-helpful mode for this purpose is 'diff'.  It provides to things that work well
-in this context: a non-zero return code upon code that doesn't meed the style
+helpful mode for this purpose is 'diff'.  It provides two things that work well
+in this context: a non-zero return code upon code that doesn't meet the style
 guide, and output that makes it clear why the build broke. Since we're using the project-aware `cargo fmt` wrapper, we cannot use
 `rustfmt` flags directly until we insert a `--` argument.
 
