@@ -7,7 +7,7 @@ author: Kyle Kneitinger
 group: tutorials
 ---
 
-# Ensuring Uniform Style
+# Assuring a Uniform Style
 The [rust-lang-nursery GitHub
 organization](https://github.com/rust-lang-nursery) is a fantastic group of
 folks building tools for both working in, and working with, the Rust language.
