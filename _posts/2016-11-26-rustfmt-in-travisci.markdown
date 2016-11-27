@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Assuring Beautiful Commits with rustfmt and Travis-CI"
+title:  "Ensuring Beautiful Commits with rustfmt and Travis-CI"
 subtitle: "With only a few small tweaks, your builds can be as picky as you!"
 date:   2016-11-26
 author: Kyle Kneitinger
 group: tutorials
 ---
 
-# Assuring a Uniform Style
+#  When Style is Standardized, Style Can Be Standard
 The [rust-lang-nursery GitHub
 organization](https://github.com/rust-lang-nursery) is a fantastic group of
 folks building tools for both working in, and working with, the Rust language.
