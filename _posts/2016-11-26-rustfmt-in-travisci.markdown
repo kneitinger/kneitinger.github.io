@@ -14,7 +14,7 @@ folks building tools for both working in, and working with, the Rust language.
 One of these tools, [rustfmt](https://github.com/rust-lang-nursery/rustfmt), is
 quite helpful for maintaining a consistent code style throughout a project.
 
-`rustfmt` is pretty easy to work with.  It's default behavior, when executed on
+`rustfmt` is pretty easy to work with.  Its default behavior, when executed on
 a file, is to check it for anything that violates the style guide, and if
 anything needs to be changed, backup the file with a `.bk` suffix and silently
 replace the original with the new formatting. If passed a valid rust file, it
@@ -29,12 +29,12 @@ to use them, and thus do not enforce any project-wide policy.
 
 # Enter Travis
 A lot of the themes brought up in the previous paragraph are pretty reminiscent
-of testing: consistency when used, but largely reliant on the developer to use
+of testing: consistent when used, but largely reliant on the developer to use
 them. Since Travis-CI was
-already set up to run our tests and report upon failures, why not leverage that build process to handle
+already set up to run our tests and report upon failure, why not leverage that build process to handle
 formatting?
 
-The default rust `.travis.yml` provided by Travis CI is pretty straightforward:
+The default Rust `.travis.yml` provided by Travis CI is pretty straightforward:
 {% highlight yaml %}
 language: rust
 rust:
