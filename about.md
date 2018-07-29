@@ -5,15 +5,15 @@ permalink: /about/
 ---
 <img src="{{ site.baseurl }}/img/selfie.jpg" alt="A picture of your truly" style="display: block; margin: 0 auto; width: 300px;"/>
 
-This is the personal blog for Kyle Kneitinger, things I find
-interesting, and projects I work on.
+This page is a collection of articles for projects I work on, things I learn, and workflows I find helpful.
 
-I grew up in Western New York, but now I am currently a student at Portland State University majoring in Computer
-Science. I am focusing my studies around audio
-synthesis, sound control interfaces, music creation software, and the ways in which our machines facilitate those with operating systems and programming languages.
+I am an ops engineer by title and developer of open source software in my free time.  I enjoy
+working on software synthesizers/audio tools, operating systems, *nix utilities, and cloud-free home
+automation electronics.
 
-In my free time I like to play music, tinker with UNIXes,
-create DSP instruments/effects, farm, 
-and play with the fine dogs that I live with.
+I currently reside in Portland, OR in a swell communal house with, among other folks,
+my partner and our wonderful dogs.
 
-You can contact me with any of the options at the bottom of the page.
+
+💜 💜 💜
+{: .center}
