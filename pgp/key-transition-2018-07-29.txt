@@ -1,0 +1,49 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+This message is to verify the transition to a new PGP key for kyle@kneit.in.
+
+The choice to move was not prompted by any compromise, simply a switch to a
+higher key length, and the omission of now irrelevant student email addresses
+of mine.
+
+This messaged will be signed by:
+
+Former key:
+    pub  2048R/52B4B711 2015-09-15
+        2468 CA4E 86FC E09B 7A98  1C19 AED2 67AD 52B4 B711
+
+Current key:
+    pub  4096R/DFEA5738 2018-07-29
+        82A8 8F3E 6123 42BB BA11  E53E D9F4 A7D2 DFEA 5738
+
+To verify the integrity of this message:
+    curl kneit.in/pgp/key-transition-2018-07-29.txt | gpg --verify
+
+Take care! <3
+Kyle J. Kneitinger
+July 29, 2018
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEE5JhMBF2YG116EIjQJ6LO2qgEjNgFAlteUAoACgkQJ6LO2qgE
+jNgepAf+Jp6LInw8RCQeT9qc+kw7NTzv9V0elK3+NWpgppcFB+oWhLLXDHZnTMKE
+952uy7F1ore1QQ0c7QunoYFrXYPCLDC9EmGSAgOOHpTJwaaT4O5Vkj0LwDz3/Oax
+TCk3ovIN7UhJ3j+VURRhEf3Q8LG/k58tehi9OOdKXXJNmbX1yX/slKPRuTz9mogW
+ez8nhmyJWu5Bw7+CdMLGWYU6RAu9LwZO4yNLndwNXx3/eM76GaN1+OJrbDXuUOw8
+yYkNx/n/sEYN0fOYQ4X0BUMF1nwj4YpUXSQgrmJ6/iv0eYd2vtEawhv7ZC2Z3dFn
+qDJ6wKNLxnSbSaPA+QQB8EiZh1E15IkCMwQBAQgAHRYhBIKojz5hI0K7uhHlPtn0
+p9Lf6lc4BQJbXlAWAAoJENn0p9Lf6lc45ScP+gM6h8GNGRwGkYT44hpEVRLnjEW7
+pqw2OmzusUTr2v8n5o8e+wl+XxJsGAt61eO/kBcmpPIW5oBtS4l8NW8yUxHseObY
+oExzX5YMgR4zLkZ0zEW1bS4YStz0cSV74lSBaSkaG5Guh9wUZ5mHbGQRTJ1qtopI
+150exjaB7RSwyGni35q2/4gmRJUFxcqs+enRIWYzJcwT0/7/uGy+/zFUftbOs1UH
+lCRiW7jKIujwbUiGZM38hR1ZETIJTlKefU5miVFJEtFu+9tI1xjRrnqh8H1sNm3X
+E4/QtbqQWlL6SPNpWSiAplyKB8mrfpswjzMyU0bJrOG6zmx9CQi6bn3gTKpyWa4t
+h6JIbScWV+8jz3A9bCv0uYT/IRHKTSZR3XVzlI6b0klr5zNTiCADQCNMVDu96Eee
+YOgOjqUamQqFN25ZkZdXAaOMxg47rxFoNnsuA+sSaKydPDfW2fRd7c3HsozRzdzv
+r8Pv7o2uSxIDdiF65PpaV9CnxpZy5gSh9rrCe3gHMmxF7AxaOistth+FWeTs/Xqb
+LKgMVbkjodOqTcaduMnLtk3/ATWL6/91BmNNN3ffqTeUY1jtRihU4BIg6Ev9K5Wg
+popgFXJC+yptbKQoWAEP8Z/MRpdEwLTlUVXX1bxZAB/2zbM714ATv5tKz4y9UgYc
+uIavSYQQhY73sEmU
+=Qrhi
+-----END PGP SIGNATURE-----
