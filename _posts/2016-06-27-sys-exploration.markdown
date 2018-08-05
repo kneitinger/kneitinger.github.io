@@ -111,7 +111,7 @@ It also seems that usually the first data byte will provide some sort of
 opcode-like purpose, declaring the intent of the message.  With all this in
 mind, lets look at the MPD32 data.
 
-## Dumpin' the Data
+## Dumping the Data
 
 I used the `amidi` from the `alsa-utils` suite of programs to accomplish most of this task. First, I needed to find the device ID, which is easily found with the list (`-l`) flag
 
@@ -170,7 +170,7 @@ Generic
 Bingo! So I knew I was definitely dealing with the correct data, but how could I
 know which of the 1033 bytes did what?
 
-## Decipherin' the Data
+## Deciphering the Data
 The most obvious way to determine which byte was associated with which
 parameter,  was to change some
 parameters and track the deltas between the Generic dump and the new ones. But again, I'm doing this all to
@@ -503,7 +503,7 @@ parameters that were physically modifiable is:
 </table>
 <br>
 
-## Workin' with the Data
+## Working with the Data
 So there it was, my very own preset map! Now I had the key to whatever
 configuration I could dream up!  I did a quick test to verify that uploading a
 .syx works, by changing the mpd_edit.syx's name bytes from "Generic" to
