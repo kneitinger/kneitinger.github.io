@@ -3,7 +3,7 @@ title: kyle kneitinger
 email: kyle@kneit.in
 github: kneitinger
 description: > # this means to ignore newlines until "baseurl:"
-    The personal homepage of Kyle Kneitinger: musician, programmer & student
+    The personal homepage of Kyle Kneitinger: programmer, ops engineer, software synthesizer creator, musician & friend of dogs.
 #baseurl: "/ger" # the subpath of your site, e.g. /blog/
 url: "kneit.in" # the base hostname & protocol for your site
 twitter_username: kneitinger
