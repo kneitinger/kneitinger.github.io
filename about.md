@@ -15,5 +15,5 @@ I currently reside in Portland, OR in a swell communal house with, among other f
 my partner and our wonderful dogs.
 
 
-💜 💜 💜
+💜 🏳️‍🌈 💜
 {: .center}
