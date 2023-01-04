@@ -13,6 +13,4 @@ automation electronics.
 
 I currently reside in Portland, OR in a swell communal house with, among other folks, two wonderful dogs.
 
-
-💜 🏳️‍🌈 💜
 {: .center}
